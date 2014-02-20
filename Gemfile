@@ -16,3 +16,8 @@ end
 gem "rails", rails 
 gem 'sqlite3', '~> 1.3.3'
 gem 'fakeweb'
+# because running 'rake test' over and over sucks…
+gem 'autotest'
+gem 'autotest-growl'
+gem 'autotest-fsevent'
+gem 'mynyml-redgreen'
