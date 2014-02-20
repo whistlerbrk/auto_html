@@ -6,12 +6,12 @@ AutoHtml.add_filter(:soundcloud).with(:width => '100%', :height => 166, :auto_pl
   require 'uri'
   require 'net/http'
   text.gsub(/(\b[\w]+:\/\/)?(www.)?soundcloud\.com\/[^<\s]*/) do |match|
-    puts match
+    #puts match
     new_uri = match.to_s
     # gsub any html tags that might have been added?
     new_uri.gsub!(/<.*>/, '')
-    new_uri = (new_uri =~ /^https?\:\/\/.*/) ? URI(new_uri) : URI("http://#{new_uri}")
-    new_uri.normalize!
+    new_uri.strip!
+    new_uri = (new_uri =~ /^https?\:\/\/.*/) ? new_uri : "http://#{new_uri}"
     width = options[:width]
     height = options[:height]
     auto_play = options[:auto_play]
