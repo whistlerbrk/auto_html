@@ -1,3 +1,18 @@
+## 1.6.2, unreleased
+* Deferred loading of filters dependencies when possible
+
+## 1.6.1, released 2013-01-05
+* Permit auto_html_for on an attribute that's not in the DB.
+* Image filter: :proxy option, do not format existing <img> 
+* Link filter: :short_link_name option
+* GoogleMap filter: support for all countries (domains)
+* Gist filter: support for new URL scheme
+* Soundcloud: does not use network call anymore
+* GoogleMap: add :zoom, :show_info, :type and :more param
+* YouTube: add :autoplay option
+* New filters: worldstar
+* Deprecate GoogleVideo since it is discontinued
+
 ## 1.6.0, released 2012-07-28 
 * Twitter, Flickr, Soundcloud filters added
 * Options for markdown filter added

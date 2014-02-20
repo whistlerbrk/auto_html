@@ -1,8 +1,8 @@
-require 'uri'
-require 'net/http'
-
 AutoHtml.add_filter(:twitter).with({}) do |text, options|
-  regex = %r{https://twitter\.com(/#!)?/[A-Za-z0-9_]{1,15}/status(es)?/\d+}
+  require 'uri'
+  require 'net/http'
+
+  regex = %r{(?<!href=")https://twitter\.com(/#!)?/[A-Za-z0-9_]{1,15}/status(es)?/\d+}
 
   text.gsub(regex) do |match|
     params = { :url => match }.merge(options)
