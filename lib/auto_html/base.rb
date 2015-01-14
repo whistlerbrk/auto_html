@@ -1,3 +1,6 @@
+require 'active_support/core_ext/object/blank'
+require 'active_support/core_ext/module/attribute_accessors'
+
 module AutoHtml
   extend self
 

@@ -1,4 +1,4 @@
-%w(base filter builder auto_html_for).each do |f|
+%w(base filter builder).each do |f|
   require File.expand_path("../auto_html/#{f}", __FILE__)
 end
 
