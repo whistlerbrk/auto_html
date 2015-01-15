@@ -2,8 +2,9 @@ module AutoHtml
   class Builder
     @@filters = {}
 
-    def initialize(text)
+    def initialize(text, options = {})
       @text = text.dup
+      @options = options
     end
 
     def self.add_filter(name, &block)
