@@ -1,15 +1,27 @@
 auto_html [![Build Status](https://secure.travis-ci.org/dejan/auto_html.png?branch=master)](http://travis-ci.org/dejan/auto_html)
 =========
 
+auto_html is a library for transforming URLs to appropriate resource (image, link, YouTube, Vimeo video,...). It's the perfect choice if you don't want to bother visitors with rich HTML editor or markup code, but you still want to allow them to embed video, images, links and more on your site, purely by pasting URL. Check out the [live demo](http://rors.org/demos/auto_html).
 
-auto_html is a Rails extension for transforming URLs to appropriate resource (image, link, YouTube, Vimeo video,...). It's the perfect choice if you don't want to bother visitors with rich HTML editor or markup code, but you still want to allow them to embed video, images, links and more on your site, purely by pasting URL. Check out the [live demo](http://rors.org/demos/auto_html).
+## Update 01/15/2015
 
+I (whistlerbrk) am working on updating this gem. Please help with:
+
+* clean up
+* updates to filters
+* additional filters
+* tests / automated-testing
+* removing dependencies
+
+This library does *not* require the use of Rails or ActiveRecord and I'd prefer to move any of that integration work into an isolated module which is required if Rails is detected or to a separate gem entirely, however the exsiting integration is low-touch and that should not be necessary.
+
+Additionally there are a few filters which appear to produce Markdown. While other templating targets could be a feature, I'd prefer this be handled consistently instead of having to know in advance which filters are for what templating solutions.
 
 ## Install
 
 Specify the gem in Gemfile of the project
 
-    gem "auto_html"
+    $ gem install auto_html-whistlerbrk --pre
 
 
 ## Example usage
@@ -99,7 +111,7 @@ If you want to run it on remote server, just add this to your `deploy.rb`:
 Now you can run `cap auto_html:rebuild CLASS=[your_model]`.
 
 
-## Licence
+## License
 
 Copyright (c) 2009 Dejan Simic
 
