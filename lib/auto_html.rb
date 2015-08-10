@@ -9,6 +9,7 @@ end
 # if rails
 require 'auto_html/railtie' if defined?(Rails::Railtie)
 if defined?(ActiveRecord::Base)
+  require 'auto_html/auto_html_for'
   ActiveRecord::Base.send :include, AutoHtmlFor
 
   module ActionView::Helpers::TextHelper
