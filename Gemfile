@@ -2,7 +2,8 @@ source "http://rubygems.org"
 
 gemspec
 
-gem "rails", '~> 4.1'
+gem "rails", '~> 4.2'
+gem 'rails-html-sanitizer'
 gem 'sqlite3', '~> 1.3.3'
 gem 'fakeweb'
 

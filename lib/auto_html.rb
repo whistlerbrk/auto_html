@@ -1,4 +1,4 @@
-%w(base filter builder).each do |f|
+%w(base filter builder auto_html_for).each do |f|
   require File.expand_path("../auto_html/#{f}", __FILE__)
 end
 
@@ -9,7 +9,7 @@ end
 # if rails
 require 'auto_html/railtie' if defined?(Rails::Railtie)
 if defined?(ActiveRecord::Base)
-  require 'auto_html/auto_html_for'
+  # require 'auto_html/auto_html_for'
   ActiveRecord::Base.send :include, AutoHtmlFor
 
   module ActionView::Helpers::TextHelper
